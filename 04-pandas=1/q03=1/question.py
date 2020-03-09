@@ -16,4 +16,6 @@
 ##
 ##  >>> Escriba su codigo a partir de este punto <<<
 ##
+df3 = pd.read_csv("./q03=1/tbl0.tsv", sep="\t")
+df2['_c2'].groupby(df2['_c1']).max()
 
