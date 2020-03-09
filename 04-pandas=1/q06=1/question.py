@@ -14,3 +14,7 @@
 ##
 ##  >>> Escriba su codigo a partir de este punto <<<
 ##
+
+df6 = pd.read_csv("./q06=1/tbl0.tsv", sep="\t")
+df6['suma'] = df6['_c0'] + df6['_c2']
+df6.head()
