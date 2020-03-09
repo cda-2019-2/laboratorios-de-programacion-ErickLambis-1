@@ -15,3 +15,6 @@
 ##  >>> Escriba su codigo a partir de este punto <<<
 ##
 
+df7 = pd.read_csv("./q07=1/tbl0.tsv", sep="\t")
+df7['ano'] = df7['_c3'].str.extract(pat = '([0-9][0-9][0-9][0-9])-')
+df7.head()
