@@ -23,25 +23,25 @@
 ##
 ##  >>> Escriba su codigo a partir de este punto <<<
 ##
-doc1=$(ls *.csv)
-for data in ${doc1[*]}; do 
+Archivos=$(ls *.csv)
+for file in ${Archivos[*]}; do 
     if [ -f 1.csv ]; then
-        cat $data | sed '/^[[:space:]]*$/d' | nl | sed 's/[[:space:]]//g' | sed "s/\([0-9]\)\([A-Z]\)/"${data}\,"\1,\2,/g" >>1.csv
+        cat $file | sed '/^[[:space:]]*$/d' | nl | sed 's/[[:space:]]//g' | sed "s/\([0-9]\)\([A-Z]\)/"${file}\,"\1,\2,/g" >>1.csv
     else
-        cat $data | sed '/^[[:space:]]*$/d' | nl | sed 's/[[:space:]]//g' | sed "s/\([0-9]\)\([A-Z]\)/"${data}\,"\1,\2,/g" >1.csv
+        cat $file | sed '/^[[:space:]]*$/d' | nl | sed 's/[[:space:]]//g' | sed "s/\([0-9]\)\([A-Z]\)/"${file}\,"\1,\2,/g" >1.csv
     fi
 done
-doc2=1.csv
+filename=1.csv
 while read -r line; do 
     m=$(echo $line | awk '{print NF}' FS=",")
     i=4
     for ((i; i<=m; i++)); do 
-        v1="$(echo $line | cut -d"," -f1)",""
-        v2="$(echo $line | cut -d"," -f2)",""
-        v3="$(echo $line | cut -d"," -f3)",""
-        v4=$(echo $line | cut -d"," -f$i)
-        v5="$v1$v2$v3$v4"
-        echo "$v5"
+        VAR1="$(echo $line | cut -d"," -f1)",""
+        VAR2="$(echo $line | cut -d"," -f2)",""
+        VAR3="$(echo $line | cut -d"," -f3)",""
+        VAR4=$(echo $line | cut -d"," -f$i)
+        VAR5="$VAR1$VAR2$VAR3$VAR4"
+        echo "$VAR5"
     done
-done <$doc2
+done <$filename
 rm 1.csv
