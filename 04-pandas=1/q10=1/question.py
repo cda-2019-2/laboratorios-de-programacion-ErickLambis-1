@@ -17,3 +17,7 @@
 ##  >>> Escriba su codigo a partir de este punto <<<
 ##
 
+df10 = pd.read_csv("./q10=1/tbl2.tsv", sep="\t")
+df10 = df10.sort_values(by=['_c5a'])
+df10['_c5a'] = df10['_c5a'].apply(str) 
+df10.head()
