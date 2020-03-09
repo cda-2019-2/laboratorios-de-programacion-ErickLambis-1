@@ -1,6 +1,6 @@
-_grade: 2.92
+_grade: 3.83
 _score: 100
-date: '2020-03-09 03:56:23.171354'
+date: '2020-03-09 19:55:51.983721'
 tree:
   00-hola_mundo=0/:
     _grade: 5.0
@@ -8,10 +8,10 @@ tree:
     tree:
       q01=1/: {_grade: 5.0, _score: 1, tree: 5.0}
   01-sed=1/:
-    _grade: 0.0
+    _grade: 5.0
     _score: 1
     tree:
-      q01=1/: {_grade: 0.0, _score: 1, tree: 0.0}
+      q01=1/: {_grade: 5.0, _score: 1, tree: 5.0}
   02-bash=1/:
     _grade: 0.0
     _score: 1
@@ -34,10 +34,10 @@ tree:
       q11=1/: {_grade: 5.0, _score: 1, tree: 5.0}
       q12=1/: {_grade: 5.0, _score: 1, tree: 5.0}
   04-pandas=1/:
-    _grade: 5.0
+    _grade: 4.55
     _score: 1
     tree:
-      q01=1/: {_grade: 5.0, _score: 1, tree: 5.0}
+      q01=1/: {_grade: 0.0, _score: 1, tree: 0.0}
       q02=1/: {_grade: 5.0, _score: 1, tree: 5.0}
       q03=1/: {_grade: 5.0, _score: 1, tree: 5.0}
       q04=1/: {_grade: 5.0, _score: 1, tree: 5.0}
@@ -66,4 +66,4 @@ tree:
       q12=1/: {_grade: 5.0, _score: 1, tree: 5.0}
       q13=1/: {_grade: 5.0, _score: 1, tree: 5.0}
       q14=1/: {_grade: 5.0, _score: 1, tree: 5.0}
-2020-03-09 03:56:23.285879
+2020-03-09 19:55:52.168765

@@ -18,6 +18,5 @@
 ##
 import pandas as pd
 
-datos = pd.read_csv("data.tsv",sep = '\t') 
-cantidad = datos.groupby('_c1')['_c0'].count()
-print(cantidad)
+df1 = pd.read_csv("./q01=1/data.tsv", sep="\t")
+pd.value_counts(df1['_c1'].values, ascending=True).sort_index()
