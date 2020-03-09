@@ -17,3 +17,9 @@
 ##  >>> Escriba su codigo a partir de este punto <<<
 ##
 
+df8 = pd.read_csv("./q08=1/tbl0.tsv", sep="\t")
+df8 = df8.sort_values(by=['_c2'])
+df8['_c2'] = df8['_c2'].apply(str)
+df8 = df8.groupby('_c1')['_c2'].apply(list).reset_index(name='lista')
+df8['lista'] = [':'.join(map(str, l)) for l in df8['lista']]
+df8
