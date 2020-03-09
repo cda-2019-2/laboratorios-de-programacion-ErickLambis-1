@@ -13,18 +13,15 @@
 ##  E,9,1
 ##
 ##  >>> Escriba su codigo a partir de este punto <<<
-##
-
-df=open('data.csv','r').readlines()
-df=[row.split('\t') for row in df]
-ext1=sorted(set([row[0] for row in df]))
-ext2=sorted([[row[0],row[1]] for row in df])
-
-for i in ext1:
- imp1 = []
- for j in ext2:
-   imp2=j[0]
-   if i == imp2:
+datos=open('data.csv','r').readlines()
+datos=[row.split('\t') for row in datos]
+col2= sorted([[row[0],row[1]] for row in datos])
+letra= sorted(set([row[0] for row in datos]))
+letra
+for i in letra:
+ lista = []
+ for j in col2:
+   letra=j[0]
+   if i == letra:
     lista.append(j[1])
-    
- print(i + ',' + max(imp1) + ',' + min(imp1))
+ print(i + "," + max(lista) + "," + min(lista))

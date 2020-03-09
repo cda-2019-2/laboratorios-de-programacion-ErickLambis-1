@@ -16,4 +16,8 @@
 ##
 ##  >>> Escriba su codigo a partir de este punto <<<
 ##
+import pandas as pd
 
+datos = pd.read_csv("tbl0.tsv",sep = '\t') 
+maximo = datos.groupby('_c1')['_c2'].max()
+print(maximo)

@@ -17,6 +17,11 @@
 ##
 ##  >>> Escriba su codigo a partir de este punto <<<
 ##
+import pandas as pd
 
+datos1=pd.read_csv('tbl0.tsv',sep='\t')
+datos2=pd.read_csv('tbl2.tsv',sep='\t')
 
-
+datos=pd.merge(datos1,datos2,on='_c0')
+datos=datos.groupby('_c1')['_c5b'].sum()
+print(datos)

@@ -14,4 +14,12 @@
 ##
 ##  >>> Escriba su codigo a partir de este punto <<<
 ##
+import pandas as pd
 
+datos = pd.read_csv("tbl0.tsv",sep = '\t')
+
+
+fecha = datos['_c3']
+m=[row.split('-') for row in fecha]
+new_datos = datos.assign(ano=[row[0] for row in m])
+print(new_datos)
