@@ -17,5 +17,19 @@
 ##  >>> Escriba su codigo a partir de este punto <<<
 ##
 
+m=open('data.csv','r').readlines()
+m=[row.replace('\n','') for row in m]
+m=[row.split('\t') for row in m]
 
+l=[[row[0],row[4].split(',')]  for row in m]
+
+lista=[]
+
+for i in l:
+  sumcol=0
+  for j in i[1]:
+   j= j.split(':')
+   letra=i[0]
+   sumcol = sumcol + int(j[1])
+  print(letra,str(sumcol),sep=',')
 

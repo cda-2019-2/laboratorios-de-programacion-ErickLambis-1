@@ -14,4 +14,18 @@
 ##
 ##  >>> Escriba su codigo a partir de este punto <<<
 ##
+df1=open('data.csv','r').readlines()
+df1=[row.split('\t') for row in df1]
+df1=[row[0] for row in df1]
+df1=sorted(df1)
 
+df2={}
+ 
+for j in df1:
+    if j in df2:
+        df2[j]=df2[j]+1
+    else:
+        df2[j]=1
+
+for i in df2:
+    print(i + ',' + str(df2[i]))

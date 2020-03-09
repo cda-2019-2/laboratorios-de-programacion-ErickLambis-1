@@ -21,6 +21,6 @@
 --
 --  >>> Escriba su codigo a partir de este punto <<<
 --  
-
+SELECT COUNT(*) FROM tbl;
 
 

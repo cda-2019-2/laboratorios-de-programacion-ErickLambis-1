@@ -21,5 +21,22 @@
 ##  12,3
 ##
 ##  >>> Escriba su codigo a partir de este punto <<<
-##
+## 
+
+df=open('data.csv','r').readlines()
+df=[row.split('\t') for row in df]
+df=[row[2] for row in df]
+df=[row.split('-') for row in df]
+df=sorted([row[1] for row in df])
+
+df2={}
+ 
+for i in df:
+    if i in df2:
+        df2[i]=df2[i]+1
+    else:
+        df2[i]=1
+
+for j in df2:
+    print(j + ',' + str(df2[j]))
 

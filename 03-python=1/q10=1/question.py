@@ -18,4 +18,14 @@
 ##  >>> Escriba su codigo a partir de este punto <<<
 ##
 
+df=open('data.csv','r').readlines()
+df=[row.replace('\n','') for row in df]
+df=[row.split('\t') for row in df]
 
+reg=[[row[0],row[3],row[4]] for row in df]
+
+for i in reg:
+    a=i[0]
+    b=len(i[1].split(','))
+    c=len(i[2].split(','))
+    print(a,b,c,sep=',')
