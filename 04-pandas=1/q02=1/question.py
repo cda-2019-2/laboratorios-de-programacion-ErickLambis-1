@@ -16,3 +16,5 @@
 ##
 ##  >>> Escriba su codigo a partir de este punto <<<
 ##
+df2 = pd.read_csv("./q02=1/tbl0.tsv", sep="\t")
+df2['_c2'].groupby(df2['_c1']).mean()
