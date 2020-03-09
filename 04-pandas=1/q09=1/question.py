@@ -17,3 +17,9 @@
 ##  >>> Escriba su codigo a partir de este punto <<<
 ##
 
+df9 = pd.read_csv("./q09=1/tbl1.tsv", sep="\t")
+df9 = df9.sort_values(by=['_c4'])
+df9['_c4'] = df9['_c4'].apply(str) 
+df9 = df9.groupby('_c0')['_c4'].apply(list).reset_index(name='lista')
+df9['lista'] = [','.join(map(str, l)) for l in df9['lista']]
+df9.head()
