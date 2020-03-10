@@ -18,9 +18,9 @@
 ##
 import pandas as pd
 
-datos = pd.read_csv("tbl1.tsv",sep = '\t')
+df9 = pd.read_csv("tbl1.tsv",sep = '\t')
 
-datos = datos.sort_values(by=['_c4'])
-datos = datos.groupby('_c0')['_c4'].apply(','.join).reset_index()
-datos.columns = ['_c0','lista']
-print(datos)
+df9 = df9.sort_values(by=['_c4'])
+df9 = df9.groupby('_c0')['_c4'].apply(','.join).reset_index()
+df9.columns = ['_c0','lista']
+print(df9)

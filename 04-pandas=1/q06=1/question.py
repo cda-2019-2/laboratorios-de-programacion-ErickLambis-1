@@ -16,7 +16,7 @@
 ##
 import pandas as pd
 
-datos = pd.read_csv("tbl0.tsv",sep = '\t') 
-new_datos = datos.assign(suma=datos['_c0'] + datos['_c2'])
+df6 = pd.read_csv("tbl0.tsv",sep = '\t') 
+df7 = df6.assign(suma=df6['_c0'] + df6['_c2'])
 
-print(new_datos)
+print(df7)

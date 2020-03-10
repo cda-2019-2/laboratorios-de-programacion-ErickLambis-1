@@ -16,10 +16,10 @@
 ##
 import pandas as pd
 
-datos = pd.read_csv("tbl0.tsv",sep = '\t')
+df7 = pd.read_csv("tbl0.tsv",sep = '\t')
 
 
-fecha = datos['_c3']
-m=[row.split('-') for row in fecha]
-new_datos = datos.assign(ano=[row[0] for row in m])
-print(new_datos)
+col = df7['_c3']
+col2=[row.split('-') for row in col]
+df8 = df7.assign(ano=[row[0] for row in col2])
+print(df8)

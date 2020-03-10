@@ -18,6 +18,6 @@
 ##
 import pandas as pd
 
-datos = pd.read_csv("tbl0.tsv",sep = '\t') 
-maximo = datos.groupby('_c1')['_c2'].max()
-print(maximo)
+df3 = pd.read_csv("tbl0.tsv",sep = '\t') 
+mx = df3.groupby('_c1')['_c2'].max()
+print(mx)

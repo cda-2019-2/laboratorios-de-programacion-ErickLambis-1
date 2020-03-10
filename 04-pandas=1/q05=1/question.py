@@ -18,6 +18,6 @@
 ##
 import pandas as pd
 
-datos = pd.read_csv("tbl0.tsv",sep = '\t') 
-suma = datos.groupby('_c1')['_c2'].sum()
+df5 = pd.read_csv("tbl0.tsv",sep = '\t') 
+suma = df5.groupby('_c1')['_c2'].sum()
 print(suma)

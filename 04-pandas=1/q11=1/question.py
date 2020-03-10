@@ -19,9 +19,9 @@
 ##
 import pandas as pd
 
-datos1=pd.read_csv('tbl0.tsv',sep='\t')
-datos2=pd.read_csv('tbl2.tsv',sep='\t')
+df11=pd.read_csv('tbl0.tsv',sep='\t')
+df12=pd.read_csv('tbl2.tsv',sep='\t')
 
-datos=pd.merge(datos1,datos2,on='_c0')
-datos=datos.groupby('_c1')['_c5b'].sum()
-print(datos)
+df=pd.merge(df11,df12,on='_c0')
+df=df.groupby('_c1')['_c5b'].sum()
+print(df)

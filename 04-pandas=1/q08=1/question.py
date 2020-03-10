@@ -18,10 +18,10 @@
 ##
 import pandas as pd
 
-datos = pd.read_csv("tbl0.tsv",sep = '\t')
+df8 = pd.read_csv("tbl0.tsv",sep = '\t')
 
-datos = datos.sort_values(by=['_c2'])
-datos['_c2'] = datos['_c2'].apply(str)
-datos = datos.groupby('_c1')['_c2'].apply(':'.join).reset_index()
-datos.columns = ['_c0','lista']
-print(datos)
+df8 = df8.sort_values(by=['_c2'])
+df8['_c2'] = df8['_c2'].apply(str)
+df8 = df8.groupby('_c1')['_c2'].apply(':'.join).reset_index()
+df8.columns = ['_c0','lista']
+print(df8)

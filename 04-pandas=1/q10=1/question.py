@@ -18,10 +18,10 @@
 ##
 import pandas as pd
 
-datos = pd.read_csv("tbl2.tsv",sep = '\t')
+df10 = pd.read_csv("tbl2.tsv",sep = '\t')
 
-datos['_c5'] = datos['_c5a'] + ':' + datos['_c5b'].apply(str)
-datos = datos.sort_values(by=['_c5'])
-datos = datos.groupby('_c0')['_c5'].apply(','.join).reset_index()
-datos.columns = ['_c0','lista']
-print(datos)
+df10['_c5'] = df10['_c5a'] + ':' + df10['_c5b'].apply(str)
+df10 = df10.sort_values(by=['_c5'])
+df10 = df10.groupby('_c0')['_c5'].apply(','.join).reset_index()
+df10.columns = ['_c0','lista']
+print(df10)

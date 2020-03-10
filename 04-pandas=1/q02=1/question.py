@@ -18,6 +18,6 @@
 ##
 import pandas as pd
 
-datos = pd.read_csv("tbl0.tsv",sep = '\t') 
-promedio = datos.groupby('_c1')['_c2'].mean()
-print(promedio)
+df2 = pd.read_csv("tbl0.tsv",sep = '\t') 
+mean = df2.groupby('_c1')['_c2'].mean()
+print(mean)
